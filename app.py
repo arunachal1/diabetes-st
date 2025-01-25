@@ -7,7 +7,6 @@ from sklearn.linear_model import LogisticRegression
 model = joblib.load('./models/logreg_model.joblib')
 
 # Define the API endpoint
-@st.experimental_singleton
 def predict(data):
     input_df = pd.DataFrame(data)
     prediction = model.predict(input_df)
